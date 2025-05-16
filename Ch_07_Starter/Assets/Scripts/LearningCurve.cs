@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class LearningCurve : MonoBehaviour
 {
- 	public int CurrentAge = 30;
+    public int CurrentAge = 30;
     public int YearsToAdd = 1;
     public int CurrentGold = 32;
     public bool PureOfHeart = true;
@@ -14,13 +14,13 @@ public class LearningCurve : MonoBehaviour
     public int PlayerLives = 3;
     public Transform CamTransform;
     public GameObject DirectionLight;
-    public Transform LightTransform; 
+    public Transform LightTransform;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         CamTransform = this.GetComponent<Transform>();
-        Debug.Log(CamTransform.localPosition); 
+        Debug.Log(CamTransform.localPosition);
 
         //DirectionLight = GameObject.Find("Directional Light"); 
         LightTransform = DirectionLight.GetComponent<Transform>();
@@ -29,7 +29,7 @@ public class LearningCurve : MonoBehaviour
         // Character hero = new Character();
         // Character assistantHero= hero;
         // assistantHero.Name = "Sir Kane the Bold";
-        
+
         // hero.PrintStatsInfo();
         // assistantHero.PrintStatsInfo(); 
         // //assistantHero.Reset();
@@ -50,13 +50,13 @@ public class LearningCurve : MonoBehaviour
 
         //HealthStatus();
 
- 	    // Dictionary<string, int> ItemInventory = new Dictionary<string, int>()
+        // Dictionary<string, int> ItemInventory = new Dictionary<string, int>()
         // {
         //     { "Potion", 5 },
         //     { "Antidote", 7 },
         //     { "Aspirin", 1 }
         // };
-        
+
         // foreach(KeyValuePair<string, int> kvp in ItemInventory)
         // {
         //     Debug.LogFormat("Item: {0} - {1}g", kvp.Key, kvp.Value);
@@ -73,9 +73,9 @@ public class LearningCurve : MonoBehaviour
         // Debug.Log("Next skill level -> " + NextSkillLevel);
     }
 
- 	public void HealthStatus()
+    public void HealthStatus()
     {
-        while(PlayerLives > 0)
+        while (PlayerLives > 0)
         {
             Debug.Log("Still alive!");
             PlayerLives--;
@@ -86,7 +86,7 @@ public class LearningCurve : MonoBehaviour
 
     public void FindPartyMember()
     {
-        List<string> QuestPartyMembers = new 
+        List<string> QuestPartyMembers = new
         List<string>()
         {
             "Grim the Barbarian",
@@ -97,19 +97,19 @@ public class LearningCurve : MonoBehaviour
         QuestPartyMembers.Insert(1, "Tanis the Thief");
         QuestPartyMembers.RemoveAt(0);
         //QuestPartyMembers.Remove("Grim the Barbarian");
-        
+
         int listLength = QuestPartyMembers.Count;
         Debug.LogFormat("Party Members: {0}", listLength);
 
-        foreach(string partyMember in QuestPartyMembers)
+        foreach (string partyMember in QuestPartyMembers)
         {
             Debug.LogFormat("{0} - Here!", partyMember);
-        } 
+        }
     }
 
- 	public void RollDice()
+    public void RollDice()
     {
-        switch(Dice)
+        switch (Dice)
         {
             case 7:
             case 15:
@@ -124,9 +124,9 @@ public class LearningCurve : MonoBehaviour
         }
     }
 
- 	public void PrintCharacterAction()
+    public void PrintCharacterAction()
     {
-        switch(CharacterAction)
+        switch (CharacterAction)
         {
             case "Heal":
                 Debug.Log("Potion sent.");
@@ -140,11 +140,11 @@ public class LearningCurve : MonoBehaviour
         }
     }
 
- 	public void OpenTreasureChamber()
+    public void OpenTreasureChamber()
     {
-        if(PureOfHeart && RareItem == "Relic Stone")
+        if (PureOfHeart && RareItem == "Relic Stone")
         {
-            if(!HasSecretIncantation)
+            if (!HasSecretIncantation)
             {
                 Debug.Log("You have the spirit, but not the knowledge.");
             }
@@ -159,9 +159,9 @@ public class LearningCurve : MonoBehaviour
         }
     }
 
- 	public void Thievery() 
+    public void Thievery()
     {
-        if(CurrentGold > 50)
+        if (CurrentGold > 50)
         {
             Debug.Log("You're rolling in it!");
         }
@@ -184,8 +184,10 @@ public class LearningCurve : MonoBehaviour
     /// <summary>
     /// Computes a modified age by adding two variables together
     /// </summary>
-	void ComputeAge() 
+	void ComputeAge()
     {
         Debug.Log(CurrentAge + YearsToAdd);
     }
+    
+    
 }
