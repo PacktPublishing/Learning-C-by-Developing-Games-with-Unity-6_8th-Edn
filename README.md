@@ -1,3 +1,5 @@
+<p align='center'><a href='https://www.packtpub.com/en-us/unlock?step=1'><img src='https://static.packt-cdn.com/assets/images/packt+events/finalGH_design_redeem.png'/></a></p>
+
 <h1 align="center">
 Learning C# by Developing Games with Unity 6, Eighth Edition</h1>
 <p align="center">This is the code repository for <a href ="https://www.packtpub.com/en-us/product/learning-c-by-developing-games-with-unity-6-eighth-edition-9781805808718"> Learning C# by Developing Games with Unity 6, Eighth Edition</a>, published by Packt.
